@@ -27,6 +27,7 @@ class LoginForm(FlaskForm):
     submit = SubmitField(label='Log In')
 
 
+
 app = Flask(__name__)
 
 app.secret_key = "manman"
@@ -53,6 +54,10 @@ def login_page():
         else:
             return render_template("denied.html")
     return render_template("login.html", form=login_form)
+
+
+
+
 
 
 
